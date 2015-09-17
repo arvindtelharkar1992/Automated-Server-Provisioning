@@ -38,7 +38,7 @@ node1 ansible_ssh_host="IP_ADDRESS_OF_EC2_INSTANCE" ansible_ssh_user=ec2-user an
 -  Here, AssignmentKey.pem is the name of the pem file which is used for authentication while sshing into the EC2 instance.
 
 # Ansible-playbook
-- Once the 2 servers are up, the .yml was created which consisted of the task of installing a simple nginx webserver on each of the 2 instances.
+- Once the 2 servers are up, the .yml file was created which consisted of the task of installing a simple nginx webserver on each of the 2 instances.
 - The following command can be run to deploy nginx webserver on both the servers:
   $ansible-playbook -i inventory playbook.yml
 - After executing the above command, the browser can be opened and checked to see if the nginx webserver is installed on both the servers. There are indicative results which show whether the nginx webserver is installed properly or not. The screencast shows an illustration of the same.
