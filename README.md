@@ -38,10 +38,11 @@ node0 ansible_ssh_host="IP_ADDRESS_OF_DROPLET" ansible_ssh_user=root ansible_ssh
 node1 ansible_ssh_host="IP_ADDRESS_OF_EC2_INSTANCE" ansible_ssh_user=ec2-user ansible_ssh_private_key_file=AssignmentKey.pem
 -  Here, AssignmentKey.pem is the name of the pem file which is used for authentication while sshing into the EC2 instance.
 
-
-
-
-
+# Ansible-playbook
+- Once the 2 servers are up, the .yml was created which consisted of the task of installing a simple nginx webserver on each of the 2 instances.
+- The following command can be run to deploy nginx webserver on both the servers:
+  $ansible-playbook -i inventory playbook.yml
+- After executing the above command, the browser can be opened and checked to see if the nginx webserver is installed on both the servers. There are indicative results which show whether the nginx webserver is installed properly or not. The screencast shows an illustration of the same.
 
 # Link to Summary about AWS EC2:
 [AWS EC2 Summary](Amazon_Elastic_Computer Cloud.md)
