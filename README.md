@@ -43,6 +43,9 @@ node1 ansible_ssh_host="IP_ADDRESS_OF_EC2_INSTANCE" ansible_ssh_user=ec2-user an
 
 
 
+# Link to Summary about AWS EC2:
+[AWS EC2 Summary](Amazon_Elastic_Computer Cloud.md)
+
 #Link to Screencast  
 
 [Screencast](https://www.youtube.com/watch?v=dqthRMruBJY)
