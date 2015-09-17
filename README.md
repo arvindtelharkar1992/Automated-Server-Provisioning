@@ -23,6 +23,7 @@ ansible is used.
 ## Updating the inventory file:
 
 Once we run createDigitalOceanDroplet.js, a file called 'inventory' will get created and will contain the following entry:
+
 node0 ansible_ssh_host="IP_ADDRESS_OF_DROPLET" ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa
 
 # Provisioning using Amazon Web Services(AWS)
@@ -34,8 +35,18 @@ node0 ansible_ssh_host="IP_ADDRESS_OF_DROPLET" ansible_ssh_user=root ansible_ssh
 
 ## Updating the inventory file:
 - Once we run awsInstance.js, a file called 'inventory' will get updated and have the following line appended to it:
+
 node1 ansible_ssh_host="IP_ADDRESS_OF_EC2_INSTANCE" ansible_ssh_user=ec2-user ansible_ssh_private_key_file=AssignmentKey.pem
 - Here, AssignmentKey.pem is the name of the pem file which is used for authentication while sshing into the EC2 instance.
+- 
+
+
+
+
+
+#Link to Screencast  
+
+[Screencast](https://www.youtube.com/watch?v=dqthRMruBJY)
 
 
 
