@@ -21,12 +21,15 @@ ansible is used.
 - After the droplet is up and running, the IP address of the droplet will be fetched and printed on the console.
 
 ## Updating the inventory file:
+
 Once we run createDigitalOceanDroplet.js, a file called 'inventory' will get created and contain the IP address of the newly created droplet.
 
 # Provisioning using Amazon Web Services(AWS)
 ##The following steps need to be followed in order to create a EC2 instance with AWS:
-- After signing up for AWS we can create a key pair(which is named AssignmentKey.pem in this case) and save it. This .pem file will be used
-for authentication while sshing into the EC2 instance.
+- After signing up for AWS we can create a key pair(which is named AssignmentKey.pem in this case) and save it. This .pem file will be used for authentication while sshing into the EC2 instance.
+- Once the keys are setup, the aws-sdk for Javascript needs to be setup.
+-  Run npm install aws-sdk to update dependencies and to ensure that the sdk is setup.
+-  After setting up the sdk, run the command $nodejs awsInstance.js to create an EC2 instance. It does take some time to create the instance after which the public IP address of the instance will be printed out.
 
 
 
