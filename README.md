@@ -22,7 +22,8 @@ ansible is used.
 
 ## Updating the inventory file:
 
-Once we run createDigitalOceanDroplet.js, a file called 'inventory' will get created and contain the IP address of the newly created droplet.
+Once we run createDigitalOceanDroplet.js, a file called 'inventory' will get created and will contain the following entry:
+node0 ansible_ssh_host="IP_ADDRESS_OF_DROPLET" ansible_ssh_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa
 
 # Provisioning using Amazon Web Services(AWS)
 ##The following steps need to be followed in order to create a EC2 instance with AWS:
@@ -31,6 +32,10 @@ Once we run createDigitalOceanDroplet.js, a file called 'inventory' will get cre
 -  Run npm install aws-sdk to update dependencies and to ensure that the sdk is setup.
 -  After setting up the sdk, run the command $nodejs awsInstance.js to create an EC2 instance. It does take some time to create the instance after which the public IP address of the instance will be printed out.
 
+## Updating the inventory file:
+- Once we run awsInstance.js, a file called 'inventory' will get updated and have the following line appended to it:
+node1 ansible_ssh_host="IP_ADDRESS_OF_EC2_INSTANCE" ansible_ssh_user=ec2-user ansible_ssh_private_key_file=AssignmentKey.pem
+- Here, AssignmentKey.pem is the name of the pem file which is used for authentication while sshing into the EC2 instance.
 
 
 
