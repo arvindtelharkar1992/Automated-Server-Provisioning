@@ -53,7 +53,7 @@ node1 ansible_ssh_host="IP_ADDRESS_OF_EC2_INSTANCE" ansible_ssh_user=ec2-user an
 
 # Configuration management
 
-npm should be sufficient to successfully update all the dependencies that are required.The 2 major dependencies worth mentioning are: 
+npm should be sufficient to successfully update all the dependencies that are required.The 2 major dependencies worth mentioning are(can be found in the node_modules directory): 
 - needle
 - aws-sdk
 
