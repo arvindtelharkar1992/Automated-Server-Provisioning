@@ -1,0 +1,25 @@
+---
+- hosts: digitalocean
+  tasks:
+    - name: Installs nginx web server
+      apt: pkg=nginx state=installed update_cache=true
+      notify:
+        - start nginx
+
+  handlers:
+    - name: start nginx
+      service: name=nginx state=started
+
+- hosts: aws
+  tasks:
+    - name: Installs nginx web server
+      yum: pkg=nginx state=installed update_cache=true
+      become: true
+      notify:
+        - start nginx
+
+  handlers:
+    - name: start nginx
+      become: true
+      service: name=nginx state=started
+
